@@ -1,0 +1,121 @@
+
+
+#auth{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    .auth-container{
+        width: 1320px;
+        margin: 0 auto;
+    }
+
+    .auth{
+        flex: 1 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .main__wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+
+        .auth-form{
+            padding: 25px;
+            background-color: $light2-grey;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            width: 426px;
+            height: 484px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+
+            .title{
+                font: 24px Inter-Medium, sans-serif;
+                margin-bottom: 20px;
+            }
+
+            input{
+                width: 100%;
+                height: 54px;
+                padding-left: 54px;
+                border: 2px solid $grey;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                outline: none;
+                position: relative;
+
+                &:focus{
+                    border-color: $accent;
+                    box-shadow: 0 0 10px $light-accent;
+                }
+            }
+
+            .input-email{
+                background: url("../images/icons/email.svg") 15px 50% no-repeat;
+            }
+
+            .input-password{
+                background: url("../images/icons/password.svg") 15px 50% no-repeat;
+            }
+
+            .input-person{
+                background: url("../images/icons/person-2.svg") 15px 50% no-repeat;
+            }
+
+            .forgot{
+                margin-bottom: 25px;
+
+                a{
+                    font-size: 15px;
+                    color: $dark1-grey;
+                    text-decoration: underline;
+
+                }
+            }
+
+            .submit{
+                width: 100%;
+                height: 54px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                outline: none;
+                border: 0;
+                background-color: $accent;
+                font-size: 18px;
+                letter-spacing: 1px;
+                color: #ffffff;
+
+                &:hover{
+                    background-color: $dark1-accent;
+                }
+
+                &:focus{
+                    box-shadow: 0 0 20px $accent;
+                }
+            }
+
+            .footer{
+                text-align: center;
+            }
+        }
+    }
+
+    footer{
+        display: flex;
+        height: 80px;
+        align-items: center;
+
+        .copyright{
+            font-size: 12px;
+        }
+    }
+}

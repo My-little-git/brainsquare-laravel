@@ -1,0 +1,245 @@
+#basket{
+
+    .note{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .basket{
+        display: grid;
+        grid-template-columns: 1fr 330px;
+        gap: 20px;
+        align-items: flex-start;
+
+        .courses{
+
+            .cards{
+                margin-bottom: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+
+                .card{
+                    width: 100%;
+                    background-color: #fff;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    border-radius: 10px;
+                    padding: 25px;
+                    display: grid;
+                    grid-template-columns: 1fr 145px 18px;
+                    gap: 20px;
+
+                    .description{
+
+                        .badges{
+                            margin-bottom: 20px;
+
+                            span{
+                                font-size: 13px;
+                                -webkit-border-radius: 5px;
+                                -moz-border-radius: 5px;
+                                border-radius: 5px;
+                                padding: 3px 7px;
+                            }
+
+                            .type{
+                                background-color: $light1-grey;
+                            }
+                        }
+
+                        .title{
+                            font-family: Inter-Medium, sans-serif;
+                            font-size: 18px;
+                            margin-bottom: 10px;
+                            overflow: hidden;
+                            word-break: break-word;
+                        }
+
+                        .info{
+                            display: flex;
+                            gap: 20px;
+                            font-family: Inter-Light, sans-serif;
+
+                            div{
+                                display: flex;
+                                align-items: center;
+
+                                img{
+                                    margin-right: 5px;
+                                }
+                            }
+
+                            .lessons{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .options{
+                        border: 2px solid $accent;
+                        -webkit-border-radius: 10px;
+                        -moz-border-radius: 10px;
+                        border-radius: 10px;
+                        padding: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        .lessons{
+                            font-family: Inter-Bold, sans-serif;
+                            font-size: 12px;
+                            margin-bottom: 10px;
+                        }
+
+                        .price{
+                            font-size: 20px;
+                            margin-bottom: 5px;
+                        }
+
+                        .per-lesson{
+                            font-size: 11px;
+                            color: $dark1-grey;
+                        }
+                    }
+
+                    .delete{
+                        width: 18px;
+                        height: 18px;
+                        background: url("../images/icons/cross.svg");
+                        border: 0;
+                        align-self: center;
+                        justify-self: end;
+                        cursor: pointer;
+
+                        &:hover{
+                            filter: brightness(0.8);
+                        }
+                    }
+                }
+            }
+
+            .add{
+                padding: 14px 30px;
+                border: 2px solid $accent;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                display: inline-block;
+                background-color: #fff;
+                color: $accent;
+                font-family: Inter-Medium;
+                transition: .2s background-color, .2s color ease-in;
+
+                &:hover{
+                    background-color: $accent;
+                    color: #fff;
+                }
+            }
+        }
+
+        .payment{
+            background-color: #fff;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            padding: 25px;
+
+            .result{
+                display: flex;
+                justify-content: space-between;
+                font-family: Inter-Medium, sans-serif;
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .calculations{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                margin-bottom: 20px;
+
+                .sum{
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 14px;
+                    color: $dark1-grey;
+                }
+
+                .discount{
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 14px;
+                    color: $dark1-grey;
+                }
+            }
+
+            .promo-code{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 20px;
+
+                .control{
+                    font-size: 14px;
+                    color: #F97C09;
+                    cursor: pointer;
+                }
+
+                form{
+                    position: relative;
+
+                    .submit{
+                        position: absolute;
+                        background: url("../images/icons/arrow-right2.svg");
+                        width: 20px;
+                        height: 20px;
+                        border: 0;
+                        right: 10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        cursor: pointer;
+
+                        &:hover{
+                            filter: brightness(0.8);
+                        }
+                    }
+                }
+
+                .promo{
+                    border: 1px solid $grey;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    border-radius: 10px;
+                    font-size: 16px;
+                    padding: 10px 15px;
+                    padding-right: 38px;
+                    width: 100%;
+                    outline: 0;
+
+                    &:focus{
+                        border: 1px solid #F97C09;
+                        box-shadow: 0 0 10px #f19132;
+                    }
+                }
+            }
+
+            .to-payment{
+                width: 100%;
+                height: 44px;
+                font-family: Inter-Medium, sans-serif;
+                border: 0;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                background-color: $accent;
+                color: #fff;
+
+                &:hover{
+                    background-color: darken($accent, 6.25%);
+                }
+            }
+        }
+    }
+}

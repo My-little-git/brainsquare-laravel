@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Inter-Regular";
+    font-size: 16px;
+}
+
+#app{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#app > section{
+    margin-left: 270px;
+    background-color: $light2-grey;
+    flex: 1 0 auto;
+}
+
+.container{
+    padding: 30px;
+}
+
+.section__title{
+    font: 24px 'Inter-Medium';
+    margin-bottom: 30px;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.d-none{
+    display: none;
+}
+
+.teacher__info{
+    display: flex;
+    align-items: center;
+
+    .teacher__name{
+
+    }
+
+    .teacher__avatar{
+        width: 32px;
+        height: 32px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .teacher__info-button{
+        background-color: $accent;
+        color: #fff;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        font-size: 11px;
+        width: 15px;
+        height: 15px;
+        border: 0;
+        margin-left: 5px;
+        cursor: pointer;
+    }
+}
+

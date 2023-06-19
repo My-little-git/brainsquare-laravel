@@ -1,0 +1,80 @@
+.teacher-modal__wrapper{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal{
+        width: 600px;
+        background-color: #fff;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        padding: 55px 40px 45px;
+        position: relative;
+
+        .close{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            width: 18px;
+            height: 18px;
+            border: 0;
+            background: url("../images/icons/cross.svg");
+            cursor: pointer;
+
+            &:hover{
+                filter: brightness(0.8);
+            }
+        }
+
+        .info{
+
+            .name{
+                font-family: Inter-Medium, sans-serif;
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+
+            .description{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                margin-bottom: 30px;
+                list-style: '— ';
+
+                .text{
+                    font-size: 14px;
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .advantages{
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+
+            .advantage{
+
+                .title{
+                    font-family: Inter-Medium, sans-serif;
+                    font-size: 36px;
+                }
+
+                .subtitle{
+                    font-size: 13px;
+                    color: $dark1-grey;
+                }
+            }
+        }
+    }
+}

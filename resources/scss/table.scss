@@ -1,0 +1,127 @@
+.table{
+    .titles{
+        font-family: 'Inter-ExtraLight', sans-serif;
+        padding-left: 20px;
+        margin-bottom: 25px;
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 120px 4fr 3fr 2fr 3fr 26px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .body{
+        .day-wrapper{
+            margin-bottom: 20px;
+
+            .day{
+                margin-bottom: 10px;
+                color: $dark1-grey;
+            }
+
+            .card{
+                padding: 15px 20px;
+                background-color: #fff;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                position: relative;
+
+                .group{
+                    display: flex;
+                    align-items: center;
+                }
+
+                .lesson-type__icon{
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+
+                .menu-button{
+                    outline: 0;
+                    background: #ffffff url("../images/icons/three-dots.svg") no-repeat center center;
+                    padding: 6px;
+                    border: 0;
+                    box-sizing: content-box;
+                    width: 14px;
+                    height: 14px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+
+                    &:hover{
+                        background-color: $light1-grey;
+                    }
+                }
+
+                .geo{
+                    color: $dark2-accent;
+                }
+
+                .menu{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    transform: translateY(-110%);
+                    background-color: $grey;
+                    padding: 8px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    border-radius: 10px;
+
+                    a{
+                        display: block;
+                        padding: 10px 20px;
+                        color: $black;
+                        -webkit-border-radius: 10px;
+                        -moz-border-radius: 10px;
+                        border-radius: 10px;
+
+                        &:hover{
+                            background-color: $dark2-grey;
+                        }
+                    }
+                }
+
+                .homework{
+                    margin-top: 10px;
+                    display: flex;
+                    align-items: center;
+
+
+
+                    .files{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px;
+
+                        .title{
+                            display: inline-block;
+                            align-self: center;
+                        }
+
+                        .file{
+                            display: inline-block;
+                            background-color: $light1-grey;
+                            padding: 8px 15px;
+                            -webkit-border-radius: 10px;
+                            -moz-border-radius: 10px;
+                            border-radius: 10px;
+                            color: #000;
+                            transition: .1s background-color ease-in;
+
+                            &:hover{
+                                background-color: $grey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+

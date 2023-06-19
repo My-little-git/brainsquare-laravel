@@ -1,0 +1,75 @@
+@mixin aside-icon($url){
+    &{
+        position: relative;
+    }
+
+    &::before{
+        content: '';
+        background: url($url);
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        left: -30px;
+        transform: translateY(-50%);
+        filter: grayscale(100%);
+    }
+}
+
+.aside{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 270px;
+    padding-top: 56px;
+
+    .aside__links{
+        margin-top: 15px;
+        display: block;
+
+        .aside__link{
+            padding: 15px 45px;
+            display: block;
+            color: $black;
+
+            &:hover{
+                background: $grey;
+            }
+
+            .link-main{
+                @include aside-icon("../images/icons/home.svg")
+            }
+
+            .link-schedule{
+                @include aside-icon("../images/icons/schedule.svg")
+            }
+
+            .link-courses{
+                @include aside-icon("../images/icons/courses.svg")
+            }
+
+            .link-homework{
+                @include aside-icon("../images/icons/homework.svg")
+            }
+
+            .link-performance{
+                @include aside-icon("../images/icons/performance.svg")
+            }
+
+            &:hover div::before {
+                filter: grayscale(0) !important;
+            }
+        }
+
+        .aside__link-active{
+            background-color: $light1-grey;
+
+            div::before{
+                filter: grayscale(0) !important;
+            }
+        }
+    }
+}
+
+

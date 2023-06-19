@@ -1,0 +1,100 @@
+#schedule{
+
+    .control{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 25px;
+
+        .buttons{
+            display: flex;
+            gap: 10px;
+
+            button{
+                width: 12px;
+                height: 12px;
+                border: 0;
+                cursor: pointer;
+            }
+
+            .prev{
+                background: url("../images/icons/arrow-left.svg");
+            }
+
+            .next{
+                background: url("../images/icons/arrow-right.svg");
+            }
+        }
+    }
+
+    .schedule__table{
+        width: 100%;
+
+        .table__head{
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            justify-items: center;
+            margin-bottom: 15px;
+        }
+
+        .table__body{
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            justify-items: center;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+
+            .day{
+                min-height: 128px;
+                background-color: #fff;
+                width: 100%;
+                align-items: center;
+                border: 1px solid $light2-grey;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+
+                .current-day{
+                    background-color: $accent;
+                    padding: 4px 8px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+                    color: #fff;
+                    margin-top: -4px;
+                }
+
+                .lessons{
+                    padding: 10px 0;
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 5px;
+
+                    .lesson{
+                        width: 100%;
+                        padding: 4px 8px;
+                        background-color: #b7d6ff;
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        border-radius: 5px;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-color: darken(#b7d6ff, 6.25%);
+                        }
+
+                        .subject{
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

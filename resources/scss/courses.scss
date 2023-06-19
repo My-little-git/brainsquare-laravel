@@ -1,0 +1,218 @@
+#course-index{
+    .courses{
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 20px;
+
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            align-items: flex-start;
+
+            .card{
+                background-color: #fff;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+                padding: 25px;
+                width: 100%;
+
+                .badges{
+                    margin-bottom: 20px;
+
+                    span{
+                        font-size: 13px;
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        border-radius: 5px;
+                        padding: 3px 7px;
+                    }
+
+                    .type{
+                        background-color: $light1-grey;
+                    }
+                }
+
+                .title{
+                    font-family: Inter-Medium, sans-serif;
+                    font-size: 18px;
+                    margin-bottom: 10px;
+                    overflow: hidden;
+                    word-break: break-word;
+                }
+
+                .info{
+                    display: flex;
+                    gap: 15px;
+                    font-family: Inter-Light, sans-serif;
+                    font-size: 14px;
+                    margin-bottom: 20px;
+
+                    div{
+                        display: flex;
+                        align-items: center;
+
+                        img{
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                .teacher{
+                    margin-bottom: 45px;
+                }
+
+                .footer{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .price{
+                        font-size: 18px;
+
+                        .number{
+                            font-size: 24px;
+                        }
+                    }
+
+                    .control{
+                        display: flex;
+                        gap: 15px;
+
+                        button{
+                            padding: 10px 15px;
+                            -webkit-border-radius: 10px;
+                            -moz-border-radius: 10px;
+                            border-radius: 10px;
+                            border: 0;
+                            color: #fff;
+                            cursor: pointer;
+                        }
+
+                        .details{
+                            background-color: $grey;
+
+                            &:hover{
+                                background-color: #b6b6b6;
+                            }
+                        }
+
+                        .add{
+                            background-color: $accent;
+
+                            &:hover{
+                                background-color: #64b4de;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .filters{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 300px;
+
+            input{
+                outline: none;
+            }
+
+            .filter{
+                background-color: #fff;
+                padding: 30px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                border-radius: 10px;
+
+                .title{
+                    font-family: Inter-Medium, sans-serif;
+                    margin-bottom: 20px;
+                }
+
+                input[type="text"]{
+                    width: 100%;
+                }
+
+                .search__input{
+                    border: 2px solid $grey;
+                    padding: 12px 15px;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    border-radius: 10px;
+
+                    &:focus{
+                        border-color: $accent;
+                        box-shadow: 0 0 10px $accent;
+                    }
+                }
+
+                .noUi-target{
+                    height: 14px;
+                    -webkit-border-radius: 7px;
+                    -moz-border-radius: 7px;
+                    border-radius: 7px;
+
+                    .noUi-connect{
+                        background-color: $accent;
+                        border-radius: 7px;
+                    }
+
+                    .noUi-origin{
+
+                        .noUi-handle{
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            border-radius: 50%;
+                            width: 10px;
+                            height: 10px;
+                            top: 1px;
+                            right: 1px;
+
+                            &::before,
+                            &::after{
+                                display: none;
+                            }
+                        }
+
+                        .noUi-handle-lower{
+                            right: -11px;
+                        }
+                    }
+                }
+
+                .subjects{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-bottom: 15px;
+
+                    div{
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .subject{
+                        margin-right: 10px;
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+
+                .more{
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    cursor: pointer;
+
+                    img{
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+

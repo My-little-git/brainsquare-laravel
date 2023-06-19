@@ -1,0 +1,60 @@
+#ad{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: #ffffff;
+    padding: 35px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    .ad__img{
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        width: 350px;
+        margin-right: 40px;
+    }
+
+    .ad__title{
+        font: 22px 'Inter-Bold', sans-serif;
+        margin-bottom: 20px;
+    }
+
+    .ad__text{
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .ad__important{
+        font-family: 'Inter-Bold', sans-serif;
+    }
+
+    .ad__link{
+        padding: 14px 22px;
+        background-color: $accent;
+        display: inline-block;
+        color: #ffffff;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        transition: .1s background-color ease-in;
+
+        &:hover{
+            background-color: $dark1-accent;
+        }
+    }
+
+    .ad__close{
+        position: absolute;
+        top: 35px;
+        right: 35px;
+        background: 0;
+        border: 0;
+
+        &:hover{
+            filter: brightness(70%);
+        }
+    }
+}
