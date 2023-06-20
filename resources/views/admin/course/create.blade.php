@@ -8,8 +8,8 @@
         <div class="app-container">
             <div class="section__title">Создание курса</div>
             <form action="{{ route('admin.course.store') }}" method="POST">
-                <div class="row">
-                    <div class="mb-3 col">
+                <div class="row mb-3">
+                    <div class="col">
                         <label class="form-label" for="name">Название</label>
                         <input name="name"
                                type="text"
@@ -18,8 +18,8 @@
                                value="{{ old('name') }}">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="mb-3 col-2">
+                <div class="row mb-3">
+                    <div class="col">
                         <label class="form-label" for="subject">Предмет</label>
                         <select name="subject_id" id="subject" class="form-select" required>
                             <option disabled {{ old('subject_id') ?: "selected" }}>-- Выберите предмет --</option>
@@ -32,7 +32,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="mb-3 col-3">
+                    <div class="col">
                         <label class="form-label" for="course-type">Тип курса</label>
                         <select name="course_type_id" id="course-type" class="form-select" required>
                             <option disabled {{ old('course_type_id') ?: "selected" }}>-- Выберите тип курса --</option>
@@ -45,7 +45,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="mb-3 col-3">
+                    <div class="col">
                         <label class="form-label" for="teacher">Учитель</label>
                         <select name="teacher_id" id="teacher" class="form-select" required>
                             <option disabled {{ old('teacher_id') ?: "selected" }}>-- Выберите учителя --</option>
@@ -58,16 +58,16 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="mb-3 col-2">
-                        <label class="form-label" for="seats">Количество мест</label>
+                    <div class="col-1">
+                        <label class="form-label" for="seats">Места</label>
                         <input name="seats"
                                type="number"
                                id="seats"
                                class="form-control"
                                value="{{ old('seats') }}">
                     </div>
-                    <div class="mb-3 col-2">
-                        <label class="form-label" for="lessons">Количество занятий</label>
+                    <div class="col-1">
+                        <label class="form-label" for="lessons">Занятия</label>
                         <input name="lessons"
                                type="number"
                                id="lessons"
@@ -76,8 +76,8 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="mb-3 col-4">
+                <div class="row mb-4">
+                    <div class="col-4">
                         <label class="form-label" for="start_at">Даты проведения курса</label>
                         <div class="row">
                             <div class="col">
@@ -97,9 +97,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-4">
                         <label class="form-label" for="start_at">Дни недели</label>
-                        <div class="row g-2">
+                        <div class="row g-3">
                             <div class="col">
                                 <input type="checkbox" class="input-day" name="days" id="monday" value="1">
                                 <label for="monday" class="label-day">ПН</label>
