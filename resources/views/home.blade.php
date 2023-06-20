@@ -5,7 +5,7 @@
 @section('content')
 
     <section id="home">
-        <div class="container">
+        <div class="app-container">
 
             <div class="ad__wrapper d-none">
                 @include('layouts.partials.ad')

@@ -30,4 +30,22 @@
             border-color: $dark2-accent;
         }
     }
+
+    .logout-button{
+        background-color: #ef4848;
+        border: 0;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        font-size: 18px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        padding: 8px 20px;
+        transition: .3s background-color, border, color ease-in;
+
+        &:hover{
+            background-color: darken(#f33636, 12.5%);
+        }
+    }
 }

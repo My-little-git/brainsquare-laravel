@@ -54,4 +54,8 @@ class Teacher extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed'
     ];
+
+    public function initials(){
+        return $this->name . ' ' . $this->surname;
+    }
 }

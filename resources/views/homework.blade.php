@@ -5,7 +5,7 @@
 @section('content')
 
     <section id="homework">
-        <div class="container">
+        <div class="app-container">
             <div class="homework">
                 <div class="section__title">Домашние работы</div>
                 <div class="table">

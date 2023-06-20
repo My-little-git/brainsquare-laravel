@@ -5,7 +5,7 @@
 @section('content')
 
 <section id="basket">
-    <div class="container">
+    <div class="app-container">
         <div class="note">Стоимость на полугодовую и годовую программы распределяется таким образом, что скидка применяется на последний месяц</div>
         <div class="basket">
             <div class="courses">

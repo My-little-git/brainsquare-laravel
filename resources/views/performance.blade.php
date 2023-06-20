@@ -5,7 +5,7 @@
 @section('content')
 
 <section id="performance">
-    <div class="container">
+    <div class="app-container">
         <div class="section__title">Успеваемость</div>
         <div class="characteristics">
             <div class="characteristic">

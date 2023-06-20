@@ -6,6 +6,26 @@
     </div>
 
     <div class="auth">
-        <a href="{{ route('login') }}" class="auth-button">Войти</a>
+
+        @auth('admin')
+
+            <form action="{{ route('logout') }}" method="POST">
+                <button type="submit" class="logout-button">Выйти</button>
+                @csrf
+            </form>
+
+        @elseauth('teacher')
+
+
+
+        @elseauth('student')
+
+
+
+        @else
+
+            <a href="{{ route('login') }}" class="auth-button">Войти</a>
+
+        @endauth
     </div>
 </header>

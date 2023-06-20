@@ -37,14 +37,14 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/student.php'));
 
             Route::middleware('teacher')
-                ->group(base_path('routes/teacher.php'))
                 ->prefix('teacher')
-                ->name('teacher');
+                ->name('teacher.')
+                ->group(base_path('routes/teacher.php'));
 
             Route::middleware('admin')
-                ->group(base_path('routes/admin.php'))
                 ->prefix('admin')
-                ->name('admin.');
+                ->name('admin.')
+                ->group(base_path('routes/admin.php'));
         });
     }
 }

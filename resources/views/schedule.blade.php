@@ -5,7 +5,7 @@
 @section('content')
 
 <section id="schedule">
-    <div class="container">
+    <div class="app-container">
         <div class="section__title">Расписание</div>
         <div class="control">
             <div class="buttons">

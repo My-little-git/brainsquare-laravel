@@ -15,12 +15,31 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
 
-    Route::group(['namespace' => 'Auth', 'middleware' => 'guest'], function () {
+    Route::group(['middleware' => 'guest'], function(){
 
-        Route::get('/login', LoginController::class)->name('login');
-        Route::get('/register', RegisterController::class)->name('register');
+        Route::group(['namespace' => 'Auth'], function () {
+
+            Route::get('/login', LoginController::class)->name('login');
+            Route::post('/login_process', LoginProcessController::class)->name('login-process');
+            Route::get('/register', RegisterController::class)->name('register');
+            Route::post('/register_process', RegisterProcessController::class)->name('register-process');
+
+        });
 
     });
+
+    Route::group(['excluded_middleware' => 'guest', 'namespace' => 'Auth'], function(){
+
+        Route::post('/logout', LogoutController::class)->name('logout');
+
+    });
+
+    Route::group(['middleware' => 'auth:student'], function(){
+
+
+
+    });
+
 
     Route::get('/', HomeController::class)->name('home');
     Route::get('/schedule', ScheduleController::class)->name('schedule');

@@ -7,7 +7,7 @@
     <section class="auth">
         <div class="auth-container">
             <div class="main__wrapper">
-                <form action="" class="auth-form">
+                <form action="{{ route('login-process') }}" method="POST" class="auth-form">
                     <div class="body">
                         <h3 class="title">Вход</h3>
                         <input type="email" name="email" class="input-email" placeholder="Электронная почта">
@@ -21,6 +21,7 @@
                         <span>Нет профиля?</span>
                         <a href="{{ route('register') }}">Зарегистрируйтесь</a>
                     </div>
+                    @csrf
                 </form>
                 <img src="{{ Vite::images('auth/keys.png') }}" alt="">
             </div>

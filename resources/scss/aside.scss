@@ -5,7 +5,7 @@
 
     &::before{
         content: '';
-        background: url($url);
+        background: url($url) no-repeat center center / cover;
         position: absolute;
         width: 20px;
         height: 20px;
@@ -27,6 +27,13 @@
     .aside__links{
         margin-top: 15px;
         display: block;
+
+        .title{
+            padding-top: 20px;
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
 
         .aside__link{
             padding: 15px 45px;
@@ -55,6 +62,42 @@
 
             .link-performance{
                 @include aside-icon("../images/icons/performance.svg")
+            }
+
+            .link-teachers-admin{
+                @include aside-icon("../images/icons/teachers-admin.svg")
+            }
+
+            .link-students-admin{
+                @include aside-icon("../images/icons/students-admin.svg")
+            }
+
+            .link-courses-admin{
+                @include aside-icon("../images/icons/courses-admin.svg")
+            }
+
+            .link-lessons-admin{
+                @include aside-icon("../images/icons/lessons-admin.svg")
+            }
+
+            .link-subjects-admin{
+                @include aside-icon("../images/icons/subjects-admin.svg")
+            }
+
+            .link-orders-admin{
+                @include aside-icon("../images/icons/orders-admin.svg")
+            }
+
+            .link-addresses-admin{
+                @include aside-icon("../images/icons/addresses-admin.svg")
+            }
+
+            .link-audiences-admin{
+                @include aside-icon("../images/icons/audiences-admin.svg")
+            }
+
+            .link-coupons-admin{
+                @include aside-icon("../images/icons/coupons-admin.svg")
             }
 
             &:hover div::before {

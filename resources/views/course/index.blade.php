@@ -5,7 +5,7 @@
 @section('content')
 
     <section id="course-index">
-        <div class="container">
+        <div class="app-container">
             <div class="section__title">Курсы</div>
             <div class="courses">
                 <div class="cards">
