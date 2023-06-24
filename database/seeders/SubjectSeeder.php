@@ -18,47 +18,47 @@ class SubjectSeeder extends Seeder
         $subjects = [
             [
                 'Математика (базовая)',
-                'CDE4FF'
+                '#CDE4FF'
             ],
             [
                 'Математика (профильная)',
-                'CDE4FF'
+                '#CDE4FF'
             ],
             [
                 'Информатика',
-                'CBF9FF'
+                '#CBF9FF'
             ],
             [
                 'Английский язык',
-                'FFD1CE'
+                '#FFD1CE'
             ],
             [
                 'Биология',
-                'D1FFCA'
+                '#D1FFCA'
             ],
             [
                 'География',
-                'FFF4CD'
+                '#FFF4CD'
             ],
             [
                 'История',
-                'FFE4CC'
+                '#FFE4CC'
             ],
             [
                 'Литература',
-                'FFD7CB'
+                '#FFD7CB'
             ],
             [
                 'Обществознание',
-                'C9F4DF'
+                '#C9F4DF'
             ],
             [
                 'Русский язык',
-                'E9CDFF'
+                '#E9CDFF'
             ],
             [
                 'Физика',
-                'CCD4FF'
+                '#CCD4FF'
             ],
         ];
 

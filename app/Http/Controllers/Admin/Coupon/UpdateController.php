@@ -16,6 +16,8 @@ class UpdateController extends Controller
     {
         $data = $request->validated();
 
+//        dd($data);
+
         $coupon->update($data);
 
         return to_route('admin.coupon.index');

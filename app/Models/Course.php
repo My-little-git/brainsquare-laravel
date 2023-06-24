@@ -14,9 +14,11 @@ class Course extends Model
         'subject_id',
         'course_type_id',
         'teacher_id',
+        'audience_id',
         'seats',
         'lessons',
         'start_at',
+        'price',
         'end_at',
     ];
 
@@ -25,9 +27,11 @@ class Course extends Model
         'subject_id' => 'integer',
         'course_type_id' => 'integer',
         'teacher_id' => 'integer',
+        'audience_id' => 'integer',
         'seats' => 'integer',
         'lessons' => 'integer',
         'start_at' => 'date',
+        'price' => 'integer',
         'end_at' => 'date',
     ];
 
@@ -41,5 +45,13 @@ class Course extends Model
 
     public function course_type(){
         return $this->belongsTo(CourseType::class);
+    }
+
+    public function audience(){
+        return $this->belongsTo(Audience::class);
+    }
+
+    public function perLesson(){
+        return round($this->price / $this->lessons, 2);
     }
 }

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Address extends Model
+class Center extends Model
 {
     use HasFactory;
 
@@ -20,4 +20,8 @@ class Address extends Model
         'city' => 'string',
         'address' => 'string'
     ];
+
+    public function audiences(){
+        return $this->hasMany(Audience::class);
+    }
 }

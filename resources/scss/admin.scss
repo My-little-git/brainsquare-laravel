@@ -1,6 +1,7 @@
 #admin{
 
     .btn{
+        outline: 0;
         padding: 14px 30px;
         border: 2px solid $accent;
         -webkit-border-radius: 10px;
@@ -10,11 +11,11 @@
         background-color: $accent;
         color: #fff;
         font-family: Inter-Medium;
-        transition: .2s background-color, .2s color ease-in;
+        transition: .2s background-color, .2s border-color ease-in;
 
         &:hover{
             background-color: darken($accent, 12.5%);
-            color: #fff;
+            border-color: darken($accent, 12.5%);
         }
 
         &:focus{
@@ -23,7 +24,16 @@
         }
     }
 
+    .btn-link{
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+    }
+
     .btn-outline{
+        outline: 0;
         padding: 14px 30px;
         border: 2px solid $accent;
         -webkit-border-radius: 10px;
@@ -44,15 +54,40 @@
             border-color: $accent;
             box-shadow: 0 0 10px $light-accent;
         }
+
+        &.close{
+            border-color: #f66666;
+            color: #f66666;
+
+            &:hover{
+                background-color: #f66666;
+                color: #fff;
+            }
+
+            &:focus{
+                box-shadow: 0 0 10px #f66666;
+            }
+        }
     }
 
-    form{
+    .wrapper{
+        padding: 30px;
         background-color: #fff;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
-        padding: 30px;
-        font-size: 1rem;
+    }
+
+    .short-form{
+        //width: 800px;
+
+        .btn{
+            padding: 0 20px;
+            height: 40px;
+        }
+    }
+
+    form{
 
         label{
             display: inline-block;
@@ -82,18 +117,45 @@
             background-color: #fff;
             background-clip: padding-box;
             border: 2px solid $grey;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
             border-radius: 10px;
             transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
         }
 
-        .input-day{
-            width: 0;
-            height: 0;
-            position: absolute;
+        .form-color{
+            display: block;
+            width: 100%;
+            height: 40px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-color: transparent;
+            border: 2px solid $grey;
+            border-radius: 10px;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+
+            &::-webkit-color-swatch{
+                -webkit-border-radius: 8px;
+                -moz-border-radius: 8px;
+                border-radius: 8px;
+                margin: -2px 0;
+                border: 0;
+            }
+        }
+
+        .is-invalid{
+            background-color: #ffeaea !important;
+            border-color: #f66666 !important;
+
+            &:focus{
+                border-color: #f66666 !important;
+                box-shadow: 0 0 10px #f66666 !important;
+            }
+        }
+
+        .error-text{
+            color: #f66666;
         }
 
         .label-day{;
@@ -108,20 +170,105 @@
             border-radius: 10px;
         }
 
-    }
-}
+        .input-day{
+            width: 0;
+            height: 0;
+            position: absolute;
 
-#admin.index{
+            &:checked + .label-day{
+                background-color: $accent;
+                color: #fff;
+            }
+
+            &[disabled]:checked + .label-day{
+                background-color: darken($accent, 50%);
+            }
+        }
+
+        .label-radio{
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid $grey;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        .input-radio{
+            width: 0;
+            height: 0;
+            position: absolute;
+
+            &:checked + .label-radio{
+                background-color: $accent;
+                color: #fff;
+            }
+        }
+
+
+
+        #preview-wrapper {
+            position: relative;
+            display: inline-block;
+
+            #preview {
+                background-color: antiquewhite;
+                height: 200px;
+                width: 200px;
+                border: 3px solid $accent;
+                border-radius: 50%;
+                transition: background ease-out 200ms;
+                background-size: contain;
+            }
+
+            #upload-button{
+                padding: 18px;
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                background-color: $accent;
+                box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+                0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+                transition: background-color ease-out 120ms;
+                position: absolute;
+                right: -5%;
+                bottom: 0;
+
+                &:hover{
+                    background-color: darken($accent, 12.5%);
+                }
+            }
+        }
+
+        #avatar{
+            display: none;
+        }
+
+
+    }
 
     table{
         width: 100%;
         padding: 10px 0;
         margin-bottom: 20px;
+        border-collapse: collapse;
+
+        & > * > * > *{
+            padding: 0.5rem 0.5rem;
+        }
+
+        th{
+            text-align: inherit;
+        }
 
         tr{
-            border: 2px solid #b24c4c;
+            border-bottom: 1px solid #b7b7b7;
         }
     }
-
 }
+
 

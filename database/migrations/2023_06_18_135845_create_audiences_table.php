@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('audiences', function (Blueprint $table) {
             $table->id()->comment('Идентификатор аудитории');
             $table->string('name', 40)->comment('Название аудитории');
-            $table->foreignId('address_id')
+            $table->foreignId('center_id')
                 ->comment('Идентификатор адреса')
-                ->constrained('addresses')
+                ->constrained('centers')
                 ->cascadeOnDelete()
                 ->cascadeOnUpdate();
             $table->timestamps();

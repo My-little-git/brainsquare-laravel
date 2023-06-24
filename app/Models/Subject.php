@@ -18,4 +18,9 @@ class Subject extends Model
         'name' => 'string',
         'color' => 'string',
     ];
+
+    public function courses()
+    {
+        return $this->hasMany(Course::class);
+    }
 }

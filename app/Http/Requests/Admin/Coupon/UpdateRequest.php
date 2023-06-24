@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests\Admin\Coupon;
 
+use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Carbon;
 
 class UpdateRequest extends FormRequest
 {
@@ -11,18 +13,25 @@ class UpdateRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return Auth('admin')->check();
     }
 
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
+     * @return array<string, ValidationRule|array|string>
      */
     public function rules(): array
     {
+        $today = Carbon::now()->addDay()->format('Y-m-d H:i');
+
         return [
-            //
+            'code' => ['required', 'string', 'min:3'],
+            'value' => ['required', 'integer'],
+            'type' => ['required', 'boolean'],
+            'only_once' => ['required', 'boolean'],
+            'expired_at' => ['nullable', 'date:d-m-Y H:i', "after:$today"],
+            'description' => ['required', 'min:2']
         ];
     }
 }

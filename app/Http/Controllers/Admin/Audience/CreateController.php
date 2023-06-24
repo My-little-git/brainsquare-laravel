@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin\Audience;
 
 use App\Http\Controllers\Controller;
-use App\Models\Address;
+use App\Models\Center;
 use Illuminate\Http\Request;
 
 class CreateController extends Controller
@@ -13,8 +13,8 @@ class CreateController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $addresses = Address::all();
+        $centers = Center::all();
 
-        return view('admin.audience.create', compact('addresses'));
+        return view('admin.audience.create', compact('centers'));
     }
 }

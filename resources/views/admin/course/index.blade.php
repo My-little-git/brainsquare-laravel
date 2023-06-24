@@ -8,8 +8,9 @@
         <div class="app-container">
             <div class="section__title">Все курсы</div>
 
-            <table>
-                <thead>
+            <div class="wrapper">
+                <table>
+                    <thead>
                     <tr>
                         <th>#</th>
                         <th>Название</th>
@@ -19,8 +20,8 @@
                         <th>Тип занятия</th>
                         <th>Кол-во занятий</th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
 
                     @foreach($courses as $course)
 
@@ -28,7 +29,7 @@
                             <td>{{ $course->id }}</td>
                             <td>{{ $course->name }}</td>
                             <td>{{ $course->price }}</td>
-                            <td>{{ $course->teacher->initials }}</td>
+                            <td>{{ $course->teacher->initials() }}</td>
                             <td>{{ $course->subject->name }}</td>
                             <td>{{ $course->course_type->name }}</td>
                             <td>{{ $course->lessons }}</td>
@@ -36,10 +37,11 @@
 
                     @endforeach
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
 
-            <a href="{{ route('admin.course.create') }}" class="btn-outline">Добавить курс</a>
+                <a href="{{ route('admin.course.create') }}" class="btn-outline">Добавить курс</a>
+            </div>
         </div>
     </section>
 

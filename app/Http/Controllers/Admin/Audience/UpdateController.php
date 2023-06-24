@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Audience;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Audience\UpdateRequest;
 use App\Models\Audience;
+use App\Models\Center;
 use Illuminate\Http\Request;
 
 class UpdateController extends Controller
@@ -18,6 +19,6 @@ class UpdateController extends Controller
 
         $audience->update($data);
 
-        return to_route('admin.audience.index');
+        return to_route('admin.center.edit', $audience->center->id);
     }
 }

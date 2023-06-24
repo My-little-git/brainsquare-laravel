@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('subjects', function (Blueprint $table) {
             $table->id()->comment('Идентификатор предмета');
             $table->string('name', 40)->comment('Название предмета');
-            $table->string('color', 6)->comment('Цвет предмета');
+            $table->string('color', 7)->comment('Цвет предмета');
             $table->timestamps();
         });
     }

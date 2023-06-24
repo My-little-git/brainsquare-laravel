@@ -15,6 +15,6 @@ class IndexController extends Controller
     {
         $teachers = Teacher::all();
 
-        return view('admin.teacher.index');
+        return view('admin.teacher.index', compact('teachers'));
     }
 }

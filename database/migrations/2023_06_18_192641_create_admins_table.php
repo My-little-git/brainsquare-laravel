@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('email')->unique()->comment('Электронная почта админа');
             $table->timestamp('email_verified_at')->nullable()->comment('Временная метка когда админ подтвердил почту');
             $table->string('password')->comment('Пароль админа');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

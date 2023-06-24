@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Audience;
+namespace App\Http\Controllers\Admin\Center;
 
 use App\Http\Controllers\Controller;
-use App\Models\Audience;
+use App\Models\Center;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -13,8 +13,8 @@ class IndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $audiences = Audience::all();
+        $centers = Center::all();
 
-        return view('admin.audience.index', compact('audiences'));
+        return view('admin.center.index', compact('centers'));
     }
 }

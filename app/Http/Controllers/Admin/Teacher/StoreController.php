@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Teacher\StoreRequest;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class StoreController extends Controller
 {
@@ -15,6 +16,12 @@ class StoreController extends Controller
     public function __invoke(StoreRequest $request)
     {
         $data = $request->validated();
+
+        if (isset($data['avatar'])){
+            $avatar = $data['avatar'];
+            $path = $avatar->store('avatars', 'public');
+            $data['avatar'] = $path;
+        }
 
         Teacher::create($data);
 

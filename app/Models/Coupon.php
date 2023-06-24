@@ -23,7 +23,7 @@ class Coupon extends Model
         'value' => 'double',
         'type' => 'boolean',
         'only_once' => 'boolean',
-        'expired_at' => 'timestamp',
+        'expired_at' => 'datetime:Y-m-d H:i:s',
         'description' => 'string',
     ];
 

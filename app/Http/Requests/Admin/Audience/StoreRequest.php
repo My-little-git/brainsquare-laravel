@@ -11,7 +11,7 @@ class StoreRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return Auth('admin')->check();
     }
 
     /**
@@ -22,7 +22,8 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => ['required', 'min:2', 'max:40'],
+            'center_id' => ['required'],
         ];
     }
 }

@@ -15,6 +15,6 @@ class DestroyController extends Controller
     {
         $audience->delete();
 
-        return to_route('admin.audience.index');
+        return back();
     }
 }

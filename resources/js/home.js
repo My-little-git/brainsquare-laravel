@@ -25,7 +25,7 @@ $(document).ready(function(){
         $('.ad__wrapper').removeClass('d-none')
         $('.ad__close').on('click', () => {
             $('.ad__wrapper').slideUp(200);
-            Cookies.set('cook_banner', 1, { expires: 2 })
+            Cookies.set('cook_banner', 1, { minute: 3 })
         })
     }
 

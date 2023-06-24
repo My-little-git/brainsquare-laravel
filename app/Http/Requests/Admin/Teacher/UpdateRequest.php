@@ -11,7 +11,7 @@ class UpdateRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return Auth('admin')->check();
     }
 
     /**
@@ -22,7 +22,13 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'avatar' => ['nullable', 'image'],
+            'name' => ['required', 'min:2', 'max:60'],
+            'surname' => ['required', 'min:2', 'max:70'],
+            'education_id' => ['required'],
+            'email' => ['required', 'email'],
+            'phone' => ['required', 'min:11', 'max:11'],
+            'birthday' => ['required', 'date_format:Y-m-d'],
         ];
     }
 }

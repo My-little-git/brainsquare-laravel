@@ -29,7 +29,7 @@ class AudienceSeeder extends Seeder
         foreach ($audiences as $audience){
             Audience::create([
                 'name' => $audience[0],
-                'address_id' => $audience[1],
+                'center_id' => $audience[1],
             ]);
         }
     }

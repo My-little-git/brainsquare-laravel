@@ -70,7 +70,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Moscow',
 
     /*
     |--------------------------------------------------------------------------
@@ -105,7 +105,7 @@ return [
     |
     | This locale will be used by the Faker PHP library when generating fake
     | data for your database seeds. For example, this will be used to get
-    | localized telephone numbers, street address information and more.
+    | localized telephone numbers, street center information and more.
     |
     */
 

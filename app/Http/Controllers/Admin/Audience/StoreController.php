@@ -18,6 +18,6 @@ class StoreController extends Controller
 
         Audience::create($data);
 
-        return to_route('admin.audience.index');
+        return back();
     }
 }

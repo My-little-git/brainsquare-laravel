@@ -20,12 +20,9 @@ return new class extends Migration
                 ->constrained('courses')
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
-            $table->foreignId('audiences_id')
-                ->comment('Идентификатор аудитории')
-                ->constrained('audiences')
-                ->cascadeOnUpdate()
-                ->cascadeOnDelete();
-            $table->string('topic', 40)->comment('Тема занятия');
+            $table->string('topic', 40)->comment('Тема занятия')->nullable();
+            $table->time('time')->comment('Время');
+            $table->date('date')->comment('Дата');
             $table->timestamps();
         });
     }

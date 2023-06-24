@@ -22,11 +22,8 @@
             <a class="aside__link {{ Route::is('admin.order.*') ? "aside__link-active" : "" }}" href="{{ route('admin.order.index') }}">
                 <div class="link-orders-admin">Заказы</div>
             </a>
-            <a class="aside__link {{ Route::is('admin.address.*') ? "aside__link-active" : "" }}" href="{{ route('admin.address.index') }}">
-                <div class="link-addresses-admin">Адреса</div>
-            </a>
-            <a class="aside__link {{ Route::is('admin.audience.*') ? "aside__link-active" : "" }}" href="{{ route('admin.audience.index') }}">
-                <div class="link-audiences-admin">Аудитории</div>
+            <a class="aside__link {{ Route::is('admin.center.*') ? "aside__link-active" : "" }}" href="{{ route('admin.center.index') }}">
+                <div class="link-centers-admin">Центры</div>
             </a>
             <a class="aside__link {{ Route::is('admin.coupon.*') ? "aside__link-active" : "" }}" href="{{ route('admin.coupon.index') }}">
                 <div class="link-coupons-admin">Купоны</div>
@@ -35,7 +32,7 @@
 
     @elseauth('teacher')
 
-    @else
+    @elseauth('student')
 
         <nav class="aside__links">
             <a class="aside__link {{ Route::is('home') ? "aside__link-active" : "" }}" href="{{ route('home') }}">
@@ -52,6 +49,17 @@
             </a>
             <a class="aside__link {{ Route::is('performance') ? "aside__link-active" : "" }}" href="{{ route('performance') }}">
                 <div class="link-performance">Успеваемость</div>
+            </a>
+        </nav>
+
+    @else
+
+        <nav class="aside__links">
+            <a class="aside__link {{ Route::is('home') ? "aside__link-active" : "" }}" href="{{ route('home') }}">
+                <div class="link-main">Главная</div>
+            </a>
+            <a class="aside__link {{ Route::is('course.index') ? "aside__link-active" : "" }}" href="{{ route('course.index') }}">
+                <div class="link-courses">Курсы</div>
             </a>
         </nav>
 

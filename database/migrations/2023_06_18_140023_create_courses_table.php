@@ -21,12 +21,17 @@ return new class extends Migration
                 ->constrained('subjects')
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
-            $table->foreignId('course_type')
+            $table->foreignId('course_type_id')
                 ->nullable()
                 ->comment('Идентификатор типа курса')
                 ->constrained('course_types')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
+            $table->foreignId('audience_id')
+                ->comment('Идентификатор аудитории')
+                ->constrained('audiences')
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
             $table->foreignId('teacher_id')
                 ->comment('Идентификатор учителя')
                 ->constrained('teachers')

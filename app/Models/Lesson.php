@@ -11,8 +11,9 @@ class Lesson extends Model
 
     protected $fillable = [
         'course_id',
-        'audience_id',
         'topic',
+        'time',
+        'date'
     ];
 
     protected $casts = [

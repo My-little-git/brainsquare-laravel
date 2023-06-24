@@ -16,6 +16,8 @@ class StoreController extends Controller
     {
         $data = $request->validated();
 
+        dd($data);
+
         Course::create($data);
 
         return to_route('admin.course.index');

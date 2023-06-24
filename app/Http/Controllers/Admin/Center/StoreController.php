@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Address;
+namespace App\Http\Controllers\Admin\Center;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\Address\StoreRequest;
-use App\Models\Address;
+use App\Http\Requests\Admin\Center\StoreRequest;
+use App\Models\Center;
 use Illuminate\Http\Request;
 
 class StoreController extends Controller
@@ -16,8 +16,8 @@ class StoreController extends Controller
     {
         $data = $request->validated();
 
-        Address::create($data);
+        Center::create($data);
 
-        return to_route('admin.address.index');
+        return to_route('admin.center.index');
     }
 }

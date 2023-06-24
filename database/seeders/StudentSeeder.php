@@ -19,7 +19,7 @@ class StudentSeeder extends Seeder
             'name' => 'Михаил',
             'surname' => 'Осипов',
             'patronymic' => 'Сергеевич',
-            'birthday' => '29-05-2003',
+            'birthday' => '2003-05-29',
             'email' => 'mishaosipov127@mail.ru',
             'phone' => '89121815910',
             'password' => 'misha777',

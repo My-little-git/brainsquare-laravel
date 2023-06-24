@@ -11,11 +11,15 @@ class Audience extends Model
 
     protected $fillable = [
         'name',
-        'address_id',
+        'center_id',
     ];
 
     protected $casts = [
         'name' => 'string',
-        'address_id' => 'integer',
+        'center_id' => 'integer',
     ];
+
+    public function center(){
+        return $this->belongsTo(Center::class);
+    }
 }

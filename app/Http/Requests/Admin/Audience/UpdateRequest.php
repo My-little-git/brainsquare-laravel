@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Admin\Audience;
 
+use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateRequest extends FormRequest
@@ -11,18 +12,18 @@ class UpdateRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return Auth('admin')->check();
     }
 
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array|string>
+     * @return array<string, ValidationRule|array|string>
      */
     public function rules(): array
     {
         return [
-            //
+            'name' => ['required', 'min:2', 'max:40']
         ];
     }
 }

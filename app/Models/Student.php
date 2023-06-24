@@ -51,9 +51,17 @@ class Student extends Authenticatable
         'patronymic' => 'string',
         'note' => 'string',
         'email' => 'string',
-        'birthday' => 'date',
+        'birthday' => 'date:Y-m-d',
         'phone' => 'string',
         'email_verified_at' => 'datetime',
         'password' => 'hashed'
     ];
+
+    public function courses(){
+        return $this->belongsToMany(Course::class);
+    }
+
+    public function orders(){
+        return $this->hasMany(Order::class);
+    }
 }

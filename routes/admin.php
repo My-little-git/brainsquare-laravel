@@ -15,20 +15,24 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'App\Http\Controllers\Admin', 'middleware' => 'auth:admin'], function () {
 
-    Route::group(['namespace' => 'Address', 'as' => 'address.'], function() {
+    Route::group(['namespace' => 'Auth'], function() {
 
-        Route::get('/addresses', IndexController::class)->name('index');
-        Route::get('/addresses/create', CreateController::class)->name('create');
-        Route::post('/addresses', StoreController::class)->name('store');
-        Route::get('/address/{address}/edit', EditController::class)->name('edit');
-        Route::patch('/address/{address}', UpdateController::class)->name('update');
-        Route::delete('/address/{address}', DestroyController::class)->name('destroy');
+        Route::post('/logout', LogoutController::class)->name('logout');
+
+    });
+
+    Route::group(['namespace' => 'Center', 'as' => 'center.'], function() {
+
+        Route::get('/centers', IndexController::class)->name('index');
+        Route::post('/centers', StoreController::class)->name('store');
+        Route::get('/center/{center}/edit', EditController::class)->name('edit');
+        Route::patch('/center/{center}', UpdateController::class)->name('update');
+        Route::delete('/center/{center}', DestroyController::class)->name('destroy');
 
     });
 
     Route::group(['namespace' => 'Audience', 'as' => 'audience.'], function() {
 
-        Route::get('/audiences', IndexController::class)->name('index');
         Route::get('/audiences/create', CreateController::class)->name('create');
         Route::post('/audiences', StoreController::class)->name('store');
         Route::get('/audience/{audience}/edit', EditController::class)->name('edit');

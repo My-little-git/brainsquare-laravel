@@ -48,7 +48,7 @@ class Teacher extends Authenticatable
         'name' => 'string',
         'surname' => 'string',
         'email' => 'string',
-        'birthday' => 'date',
+        'birthday' => 'date:Y-m-d',
         'education_id' => 'integer',
         'phone' => 'string',
         'email_verified_at' => 'datetime',
@@ -57,5 +57,9 @@ class Teacher extends Authenticatable
 
     public function initials(){
         return $this->name . ' ' . $this->surname;
+    }
+
+    public function education(){
+        return $this->belongsTo(Education::class);
     }
 }

@@ -15,27 +15,31 @@ class LoginProcessController extends Controller
     public function __invoke(LoginRequest $request)
     {
         $credentials = $request->validated();
+        $remember = (bool) ($credentials['remember'] ?? false);
 
-        if (Auth('student')->attempt($credentials)){
-            $request->session()->regenerate();
 
-            return redirect()->intended('/');
-        }
+        unset($credentials['remember']);
 
-        if (Auth('teacher')->attempt($credentials)){
-            $request->session()->regenerate();
-
-            return to_route('teacher.lesson.index');
-        }
-
-        if (Auth('admin')->attempt($credentials)){
+        if (Auth('admin')->attempt($credentials, $remember)){
             $request->session()->regenerate();
 
             return to_route('admin.course.index');
         }
 
+        if (Auth('teacher')->attempt($credentials, $remember)){
+            $request->session()->regenerate();
+
+            return to_route('teacher.lesson.index');
+        }
+
+        if (Auth('student')->attempt($credentials, $remember)){
+            $request->session()->regenerate();
+
+            return redirect()->intended('/');
+        }
+
         return back()->withErrors([
-            'login' => 'Такого пользователя не существует',
-        ])->onlyInput('login');
+            'email' => 'Такого пользователя не существует',
+        ])->onlyInput('email');
     }
 }

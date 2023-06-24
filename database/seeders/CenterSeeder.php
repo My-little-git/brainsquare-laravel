@@ -2,20 +2,18 @@
 
 namespace Database\Seeders;
 
-use App\Models\Address;
+use App\Models\Center;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class AddressSeeder extends Seeder
+class CenterSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
-     * @return void
      */
-    public function run()
+    public function run(): void
     {
-        $addresses = [
+        $centers = [
             [
                 'Триумф',
                 'Эжва',
@@ -28,11 +26,11 @@ class AddressSeeder extends Seeder
             ],
         ];
 
-        foreach ($addresses as $address){
-            Address::create([
-                'name' => $address[0],
-                'city' => $address[1],
-                'address' => $address[2],
+        foreach ($centers as $center){
+            Center::create([
+                'name' => $center[0],
+                'city' => $center[1],
+                'address' => $center[2],
             ]);
         }
     }
