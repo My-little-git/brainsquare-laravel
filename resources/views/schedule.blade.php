@@ -30,121 +30,128 @@
 
                 <div class="table__body">
 
-                    {{  }}
-
                 </div>
-{{--                <div class="table__body">--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">29</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">30</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">31</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">1</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">2</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">3</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">4</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">5</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">6</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">7</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">8</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">9</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">10</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">11</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">12</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">13</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">14</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">15</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">16</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number current-day">17</div>--}}
-{{--                        <div class="lessons">--}}
-{{--                            <div class="lesson">--}}
-{{--                                <div class="subject">Математика</div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">18</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">19</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">20</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">21</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">22</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">23</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">24</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">25</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">26</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">27</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">28</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">29</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">30</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">1</div>--}}
-{{--                    </div>--}}
-{{--                    <div class="day">--}}
-{{--                        <div class="day-number">2</div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                <div class="table__body">
+                    <div class="day">
+                        <div class="day-number">29</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">30</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">31</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">1</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">2</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">3</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">4</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">5</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">6</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">7</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">8</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">9</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">10</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">11</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">12</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">13</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">14</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">15</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">16</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">17</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">18</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">19</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">20</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">21</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">22</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">23</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number current-day">24</div>
+                        @if(auth()->user()->id === 1)
+                            <div class="lessons">
+                                <div class="lesson">
+                                    <div class="subject">Информатика</div>
+                                </div>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="day">
+                        <div class="day-number">25</div>
+                        @if(auth()->user()->id === 1)
+                            <div class="lessons">
+                                <div class="lesson">
+                                    <div class="subject">Английский язык</div>
+                                </div>
+                            </div>
+                        @endif
+                    </div>
+                    <div class="day">
+                        <div class="day-number">26</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">27</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">28</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">29</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">30</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">1</div>
+                    </div>
+                    <div class="day">
+                        <div class="day-number">2</div>
+                    </div>
+                </div>
 
             </div>
 

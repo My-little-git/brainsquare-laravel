@@ -30,8 +30,11 @@
                                                name="password"
                                                required
                                                value="{{ old('password') }}"
-                                               class="input-password form-control"
+                                               class="input-password form-control @error('password') is-invalid @enderror"
                                                placeholder="Пароль">
+                                        @error('password')
+                                        <small class="error-text">{{ $message }}</small>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="row">

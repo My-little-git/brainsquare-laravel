@@ -14,7 +14,7 @@
             <div class="events">
                 <div class="section__title">Ближайшие события</div>
                 @auth('student')
-
+                    @if(auth()->user()->id === 1)
                     <div class="table">
                         <div class="titles grid">
                             <div>Время</div>
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                     </div>
-
+                    @endif
                 @endauth
             </div>
         </div>

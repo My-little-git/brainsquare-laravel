@@ -21,7 +21,9 @@
         @elseauth('student')
 
             <div class="d-flex align-items-center">
-                <h2 class="me-4">{{ auth()->user()->email }}</h2>
+                <h3 class="me-4">{{ auth()->user()->email }}</h3>
+
+                <a href="{{ route('basket') }}" class="me-4 basket">Корзина</a>
 
                 <form action="{{ route('logout') }}" method="POST">
                     <button type="submit" class="logout-button">Выйти</button>

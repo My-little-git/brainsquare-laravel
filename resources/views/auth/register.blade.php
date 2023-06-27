@@ -81,6 +81,8 @@
                                            required
                                            name="phone"
                                            value="{{ old('phone') }}"
+                                           minlength="11"
+                                           maxlength="11"
                                            class="input-phone form-control @error('phone') is-invalid @enderror"
                                            placeholder="Телефон*">
                                     @error('phone')

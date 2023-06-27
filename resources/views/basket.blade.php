@@ -10,11 +10,12 @@
         <div class="basket">
             <div class="courses">
                 <div class="cards">
+                    @if(auth()->user()->id === 1)
                     <div class="card">
                         <div class="description">
                             <div class="badges">
                                 <span class="type">Группа</span>
-                                <span class="subject">Математика</span>
+                                <span class="subject" style="background: #CDE4FF;">Математика (профильная)</span>
                             </div>
                             <div class="title">Подготовка к ЕГЭ по профильной математике</div>
                             <div class="info">
@@ -33,27 +34,28 @@
                         </div>
                             <button class="delete"></button>
                     </div>
+                    @endif
                 </div>
                 <a href="{{ route('course.index') }}" class="add">Добавить ещё</a>
             </div>
             <div class="payment">
                 <div class="result">
                     <div class="text">К оплате</div>
-                    <div class="number">12 000 ₽</div>
+                    <div class="number">{{ auth()->user()->id === 1 ? "12 000" : "0" }} ₽</div>
                 </div>
                 <div class="calculations">
                     <div class="sum">
                         <div class="text">Сумма заказа</div>
-                        <div class="number">12 000 ₽</div>
+                        <div class="number">{{ auth()->user()->id === 1 ? "12 000" : "0" }} ₽</div>
                     </div>
                     <div class="discount">
                         <div class="text">Скидка</div>
-                        <div class="number">3 000₽</div>
+                        <div class="number">0 ₽</div>
                     </div>
                 </div>
                 <div class="promo-code">
                     <div class="control">У меня есть промокод</div>
-                    <form action="" class="d-none">
+                    <form action="" style="display: none;">
                         <input type="text" class="promo">
                         <button type="submit" class="submit">
                     </form>

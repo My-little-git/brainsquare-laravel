@@ -31,6 +31,16 @@
         }
     }
 
+    .basket{
+        display: inline-block;
+        color: #fff;
+        padding: 8px 20px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        background-color: #fcd75b;
+    }
+
     .logout-button{
         background-color: #ef4848;
         border: 0;
